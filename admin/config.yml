@@ -1,7 +1,7 @@
 # Painel de administração (Sveltia CMS). Só quem tiver acesso ao repositório do GitHub entra.
 backend:
   name: github
-  repo: O-TEU-UTILIZADOR/O-TEU-REPOSITORIO   # <- TROCAR (ex.: cuberorlando/site)
+  repo: https://github.com/12Halley/cuber01   # <- TROCAR (ex.: cuberorlando/site)
   branch: main
 
 locale: pt
