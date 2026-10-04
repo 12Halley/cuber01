@@ -1,0 +1,3 @@
+Fotos dos carros: clio-1.jpg a clio-4.jpg, 208-1.jpg ... (o numero 1 e a foto principal).
+Fotos das obras: obra-1.jpg a obra-6.jpg.
+Mudar nomes ou carros: js/dados.js. Sem foto, o site mostra uma ilustracao.

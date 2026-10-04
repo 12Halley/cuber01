@@ -1,0 +1,76 @@
+# Painel de administração (Sveltia CMS). Só quem tiver acesso ao repositório do GitHub entra.
+backend:
+  name: github
+  repo: O-TEU-UTILIZADOR/O-TEU-REPOSITORIO   # <- TROCAR (ex.: cuberorlando/site)
+  branch: main
+
+locale: pt
+site_url: /
+media_folder: img/uploads
+public_folder: /img/uploads
+
+collections:
+  - name: veiculos
+    label: Veículos
+    files:
+      - name: veiculos
+        label: Lista de veículos
+        file: data/veiculos.json
+        fields:
+          - label: Veículos
+            name: veiculos
+            widget: list
+            add_to_top: true
+            label_singular: veículo
+            summary: "{{fields.marca}} {{fields.modelo}} · {{fields.ano}}"
+            hint: O primeiro da lista aparece primeiro no site. Arrasta para mudar a ordem.
+            fields:
+              - { label: "Marca", name: marca, widget: string }
+              - { label: "Modelo", name: modelo, widget: string }
+              - { label: "Ano", name: ano, widget: number, value_type: int, min: 1950, max: 2100 }
+              - { label: "Quilómetros", name: km, widget: number, value_type: int, min: 0 }
+              - { label: "Preço (€)", name: preco, widget: number, value_type: int, min: 0 }
+              - { label: "Combustível", name: comb, widget: select, options: [Gasolina, Gasóleo, Híbrido, Elétrico, GPL], default: Gasóleo }
+              - { label: "Caixa", name: caixa, widget: select, options: [Manual, Automática], default: Manual }
+              - { label: "Tipo", name: tipo, widget: select, options: [Ligeiro, Comercial, Pesado], default: Ligeiro }
+              - { label: "Aparece em destaque na página inicial", name: destaque, widget: boolean, default: false, required: false }
+              - { label: "Vendido", name: vendido, widget: boolean, default: false, required: false }
+              - { label: "Descrição (opcional)", name: descricao, widget: text, required: false }
+              - { label: "Fotos (a primeira é a principal; arrasta para mudar a ordem)", name: fotos, widget: list, required: false, field: { label: "Foto", name: foto, widget: image } }
+
+  - name: obras
+    label: Construção
+    files:
+      - name: projetos
+        label: Projetos realizados
+        file: data/projetos.json
+        fields:
+          - label: Projetos
+            name: projetos
+            widget: list
+            add_to_top: true
+            label_singular: projeto
+            summary: "{{fields.nome}} · {{fields.local}}"
+            fields:
+              - { label: "Nome da obra", name: nome, widget: string }
+              - { label: "Categoria (ex.: Acabamentos)", name: categoria, widget: string, required: false }
+              - { label: "Local", name: local, widget: string, required: false }
+              - { label: "Estado", name: estado, widget: select, options: [Concluído, Em curso], default: Concluído }
+              - { label: "Descrição", name: descricao, widget: text, required: false }
+              - { label: "Fotos (a primeira é a principal; arrasta para mudar a ordem)", name: fotos, widget: list, required: false, field: { label: "Foto", name: foto, widget: image } }
+
+  - name: empresa
+    label: Empresa
+    files:
+      - name: empresa
+        label: Contactos e horário
+        file: data/empresa.json
+        fields:
+          - { label: "Telefone (como aparece no site)", name: telefone, widget: string }
+          - { label: "WhatsApp (só números, com indicativo. Ex.: 351912345678)", name: whatsapp, widget: string }
+          - { label: "Email", name: email, widget: string }
+          - { label: "Morada", name: morada, widget: string }
+          - { label: "Segunda a sexta · abre (hora, ex.: 9)", name: semana_abre, widget: number, value_type: int, min: 0, max: 23 }
+          - { label: "Segunda a sexta · fecha (hora, ex.: 18)", name: semana_fecha, widget: number, value_type: int, min: 1, max: 24 }
+          - { label: "Sábado · abre (deixa vazio se fechar)", name: sabado_abre, widget: number, value_type: int, min: 0, max: 23, required: false }
+          - { label: "Sábado · fecha", name: sabado_fecha, widget: number, value_type: int, min: 1, max: 24, required: false }

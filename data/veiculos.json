@@ -1,0 +1,88 @@
+{
+  "veiculos": [
+    {
+      "marca": "Volkswagen",
+      "modelo": "Golf 1.6 TDI",
+      "ano": 2019,
+      "km": 98000,
+      "preco": 16900,
+      "comb": "Gasóleo",
+      "caixa": "Manual",
+      "tipo": "Ligeiro",
+      "destaque": false,
+      "vendido": true,
+      "descricao": "",
+      "fotos": []
+    },
+    {
+      "marca": "Mercedes-Benz",
+      "modelo": "Sprinter 314",
+      "ano": 2017,
+      "km": 215000,
+      "preco": 17500,
+      "comb": "Gasóleo",
+      "caixa": "Manual",
+      "tipo": "Pesado",
+      "destaque": false,
+      "vendido": false,
+      "descricao": "",
+      "fotos": []
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "Berlingo Van",
+      "ano": 2019,
+      "km": 120000,
+      "preco": 11800,
+      "comb": "Gasóleo",
+      "caixa": "Manual",
+      "tipo": "Comercial",
+      "destaque": false,
+      "vendido": false,
+      "descricao": "",
+      "fotos": []
+    },
+    {
+      "marca": "Toyota",
+      "modelo": "Corolla Hybrid",
+      "ano": 2021,
+      "km": 61000,
+      "preco": 21900,
+      "comb": "Híbrido",
+      "caixa": "Automática",
+      "tipo": "Ligeiro",
+      "destaque": true,
+      "vendido": false,
+      "descricao": "",
+      "fotos": []
+    },
+    {
+      "marca": "Peugeot",
+      "modelo": "208 1.2 PureTech",
+      "ano": 2020,
+      "km": 78000,
+      "preco": 12500,
+      "comb": "Gasolina",
+      "caixa": "Manual",
+      "tipo": "Ligeiro",
+      "destaque": true,
+      "vendido": false,
+      "descricao": "",
+      "fotos": []
+    },
+    {
+      "marca": "Renault",
+      "modelo": "Clio 1.5 dCi",
+      "ano": 2018,
+      "km": 142000,
+      "preco": 9900,
+      "comb": "Gasóleo",
+      "caixa": "Manual",
+      "tipo": "Ligeiro",
+      "destaque": true,
+      "vendido": false,
+      "descricao": "",
+      "fotos": []
+    }
+  ]
+}
